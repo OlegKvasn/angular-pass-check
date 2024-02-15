@@ -1,0 +1,40 @@
+input {
+  align-self: center;
+  width: 70%;
+  height: 30px;
+  outline: none;
+}
+
+p {
+  font-size: 20px;
+  color: #fff;
+  align-self: center;
+}
+
+.main-section {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+.color-section {
+  width: 200px;
+  height: 100px;
+  background-color: #5b5b5b;
+}
+
+.short {
+  background-color: #c30101;
+}
+.weak {
+  background-color: #c30101;
+}
+
+.medium {
+  background-color: #ffff00;
+}
+
+.strong {
+  background-color: #008000;
+}
