@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Password Strength Check';
+  title = 'Password Strength Check App';
 
   constructor() {}
 }

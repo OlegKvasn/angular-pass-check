@@ -1,32 +1,5 @@
-<input
+<app-password-input
   [(ngModel)]="password"
-  type="password"
-  (input)="checkPasswordStrength()"
-/>
-<!-- <p>{{ password }}</p> -->
-<section class="main-section">
-  <div
-    class="color-section"
-    [ngClass]="{
-      short: passwordStrength === 'short',
-      weak: passwordStrength === 'weak',
-      medium: passwordStrength === 'medium',
-      strong: passwordStrength === 'strong'
-    }"
-  ></div>
-  <div
-    class="color-section"
-    [ngClass]="{
-      short: passwordStrength === 'short',
-      medium: passwordStrength === 'medium',
-      strong: passwordStrength === 'strong'
-    }"
-  ></div>
-  <div
-    class="color-section"
-    [ngClass]="{
-      short: passwordStrength === 'short',
-      strong: passwordStrength === 'strong'
-    }"
-  ></div>
-</section>
+  (passwordChange)="onPasswordChange($event)"
+></app-password-input>
+<app-color-sections [passwordStrength]="passwordStrength"></app-color-sections>
