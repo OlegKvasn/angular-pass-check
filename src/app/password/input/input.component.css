@@ -1,0 +1,9 @@
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+input {
+  width: 70%;
+  height: 30px;
+  outline: none;
+}

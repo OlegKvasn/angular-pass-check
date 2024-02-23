@@ -1,5 +1,5 @@
-<app-password-input
-  [(ngModel)]="password"
-  (passwordChange)="onPasswordChange($event)"
-></app-password-input>
-<app-color-sections [passwordStrength]="passwordStrength"></app-color-sections>
+<form [formGroup]="form">
+  <app-input type="password" formControlName="password"></app-input>
+  <!-- <p>{{ form.value.password }}</p> -->
+  <app-color-sections [password]="form.value.password"></app-color-sections>
+</form>

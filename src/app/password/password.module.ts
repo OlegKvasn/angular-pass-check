@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PassCheckComponent } from './pass-check/pass-check.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordComponent } from './password.component';
-import { PasswordInputComponent } from './password-input/password-input.component';
+import { InputComponent } from './input/input.component';
 import { ColorSectionsComponent } from './color-sections/color-sections.component';
+import { ControlValueAccessorDirective } from './control-value-accessor.directive';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     PassCheckComponent,
     PasswordComponent,
-    PasswordInputComponent,
+    InputComponent,
     ColorSectionsComponent,
-  ],
-  imports: [CommonModule, FormsModule],
+      ControlValueAccessorDirective
+   ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     PassCheckComponent,
     PasswordComponent,
-    PasswordInputComponent,
+    InputComponent,
     ColorSectionsComponent,
   ],
 })

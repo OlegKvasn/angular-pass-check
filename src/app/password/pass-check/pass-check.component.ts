@@ -1,19 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-pass-check',
   templateUrl: './pass-check.component.html',
   styleUrls: ['./pass-check.component.css'],
 })
-export class PassCheckComponent implements OnInit {
-  password: string = '';
-  passwordStrength: string = '';
+export class PassCheckComponent {
+  form: FormGroup;
 
-  constructor() {}
-
-  ngOnInit() {}
-
-  onPasswordChange(strength: string) {
-    this.passwordStrength = strength;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      password: '',
+    });
   }
 }
